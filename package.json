@@ -1,0 +1,12 @@
+{
+  "name": "xplicit-checkout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Two-step lead capture + Stripe Checkout for Xplicit Fitness, with GHL sync.",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "stripe": "^17.0.0"
+  }
+}

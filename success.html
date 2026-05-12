@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in! · Xplicit Fitness</title>
+<style>
+  :root {
+    --ink: #111;
+    --gold: #d4a437;
+    --paper: #fafaf7;
+    --muted: #555;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .card {
+    max-width: 560px;
+    width: 100%;
+    background: #fff;
+    border-radius: 18px;
+    padding: 48px 36px;
+    text-align: center;
+    box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.25);
+  }
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 8px 16px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    font-weight: 800;
+  }
+  p {
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 0 0 16px;
+  }
+  .check {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    background: #e7f5e9;
+    color: #1d8a3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 700;
+  }
+  ul {
+    text-align: left;
+    margin: 24px 0;
+    padding: 20px 24px;
+    background: #faf6ec;
+    border-radius: 12px;
+    list-style: none;
+  }
+  ul li {
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding-left: 24px;
+    position: relative;
+  }
+  ul li:last-child { margin-bottom: 0; }
+  ul li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+  }
+  .phone {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .phone a {
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">✓</div>
+    <div class="badge">Payment received</div>
+    <h1>You're in. Welcome to Xplicit.</h1>
+    <p>Your 10 classes are locked in for <strong>$29</strong>. A confirmation email is on its way.</p>
+    <ul>
+      <li>We'll text you within the next few minutes to book your first class.</li>
+      <li>Show up 10 minutes early on your first day — we'll get you set up.</li>
+      <li>Wear comfortable clothes and bring water. We've got the rest.</li>
+    </ul>
+    <p class="phone">Questions? Call us at <a href="tel:6198318726">619-831-8726</a></p>
+  </div>
+  <script>
+    // Clear stored session data once they've landed on success.
+    try {
+      sessionStorage.removeItem('xplicit_contactId');
+      sessionStorage.removeItem('xplicit_email');
+      sessionStorage.removeItem('xplicit_name');
+    } catch (e) {}
+  </script>
+</body>
+</html>
